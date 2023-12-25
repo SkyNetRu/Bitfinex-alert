@@ -1,66 +1,6 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<svg width="314" height="38" viewBox="0 0 165 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="bfx-logo-text" d="M141.437 19.662a.2.2 0 01-.144.338h-4.386a.198.198 0 01-.145-.063l-5.83-6.166-5.894 6.167a.198.198 0 01-.144.062h-4.387a.2.2 0 01-.144-.338l8.036-8.421-7.764-8.183a.2.2 0 01.145-.338h4.387c.055 0 .108.023.146.063l5.576 5.928 5.598-5.928a.202.202 0 01.146-.063h4.387a.2.2 0 01.145.338l-7.764 8.183 8.036 8.42zM99.856 20a.278.278 0 01-.278-.278V2.998c0-.153.125-.277.278-.277h16.571c.153 0 .277.124.277.277V5.39a.277.277 0 01-.277.277h-12.83v3.851h7.692c.153 0 .278.125.278.278v2.392a.278.278 0 01-.278.277h-7.692v4.287h12.997c.153 0 .278.124.278.277v2.693a.278.278 0 01-.278.278H99.856zM70.514 20a.278.278 0 01-.277-.278V2.998c0-.153.124-.277.277-.277h3.463c.154 0 .278.124.278.277v16.724a.278.278 0 01-.278.278h-3.463zM50.813 20a.278.278 0 01-.277-.278V2.998c0-.153.124-.277.277-.277h16.37c.153 0 .277.124.277.277v2.459a.278.278 0 01-.277.277H54.554v4.555h6.989c.153 0 .278.124.278.277v2.593a.278.278 0 01-.278.277h-6.989v6.286a.278.278 0 01-.278.278h-3.463zM40.067 5.801v13.921a.278.278 0 01-.277.278h-3.463a.278.278 0 01-.278-.278V5.802h-7.381a.278.278 0 01-.278-.278V2.998c0-.153.124-.277.278-.277h18.814c.153 0 .277.124.277.277v2.526a.278.278 0 01-.277.277h-7.415zM21.873 20a.278.278 0 01-.277-.278V2.998c0-.153.124-.277.277-.277h3.463c.154 0 .278.124.278.277v16.724a.278.278 0 01-.278.278h-3.463z"></path><path class="bfx-logo-text" fill-rule="evenodd" clip-rule="evenodd" d="M0 2.998c0-.153.124-.277.278-.277h14.798a3.609 3.609 0 013.608 3.609v1.153a3.609 3.609 0 01-3.609 3.61h.135a3.61 3.61 0 013.61 3.608v1.69A3.609 3.609 0 0115.21 20H.278A.278.278 0 010 19.722V2.998zm3.949 2.536h9.353c.92 0 1.666.746 1.666 1.666v.787c0 .92-.746 1.665-1.666 1.665H3.949V5.534zm0 6.963h9.453c.92 0 1.666.746 1.666 1.666v1.057c0 .92-.746 1.665-1.666 1.665H3.95v-4.388z"></path><path class="bfx-logo-text" d="M77.031 19.722V2.998c0-.153.124-.277.278-.277h2.363c.068 0 .133.024.184.07l13.33 11.798V2.999c0-.154.124-.278.277-.278h3.062c.153 0 .277.124.277.277v16.724a.278.278 0 01-.277.278h-2.363a.278.278 0 01-.184-.07L80.648 8.1v11.622a.278.278 0 01-.278.278H77.31a.278.278 0 01-.278-.278z"></path><path class="bfx-logo-leaf" d="M144.777 13.042c-.175-2.832 1.015-5.98 3.464-8.429 5.326-5.326 16.418-4.58 16.481-4.575-.03.044-8.139 11.8-17.748 12.9-.742.085-1.476.119-2.197.104z"></path><path class="bfx-logo-leaf" d="M145.902 16.662c.275.438.599.847.974 1.222 3.288 3.288 9.23 2.677 13.271-1.364 5.342-5.342 4.575-16.482 4.575-16.482-.029.066-5.842 13.095-15.08 15.937-1.254.386-2.511.61-3.74.687z"></path></svg>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Bitfinex Funding Rate Alert
