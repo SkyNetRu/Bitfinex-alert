@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SettingsController::class, 'index'])->name('settings');
+Route::post('/settings', [SettingsController::class, 'update'])->name('update-settings');
