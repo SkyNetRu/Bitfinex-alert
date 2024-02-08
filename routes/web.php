@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [SettingsController::class, 'index'])->name('settings');
+Route::get('/test', [SettingsController::class, 'test'])->name('settingsTest');
 Route::post('/settings', [SettingsController::class, 'update'])->name('update-settings');
+Route::post('/submit-order', [SettingsController::class, 'submitOrder'])->name('submit-order');
