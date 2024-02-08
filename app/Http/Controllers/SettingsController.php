@@ -75,23 +75,19 @@ class SettingsController extends Controller
 
     public function test() {
         $settings = Settings::first();
-        $apiPath = 'v2/book/'.$settings->currency.'/P0?len=1';
-        $response = SendGetRequest($apiPath);
-        $book = $response[0];
+        $book = $this->getRate()[0];
+        $book[$this->dictionary['rate']] = 0.056;
+        dump('$book', $book);
 
         if ($book[$this->dictionary['rate']] < $settings->rate_alert) {
             return;
         }
 
-        //Cancel all funding orders
-        $apiPath = 'v2/auth/w/funding/offer/cancel/all';
-        sleep(1);
-        SendPostRequest($apiPath)->object();
 
-//        get Wallet
-        $apiPath = 'v2/auth/r/wallets';
-        sleep(1);
-        $wallets = SendPostRequest($apiPath)->object();
+        dump('$book test');
+        $this->cancelAllFundingOrders();
+        $wallets = $this->getWallets();
+
 
         if ($wallets[0] !== 'error') {
             foreach ($wallets as $wallet) {
@@ -104,25 +100,48 @@ class SettingsController extends Controller
                         'rate' => (string)$book[$this->dictionary['rate']],
                         'period' => $book[$this->dictionary['period']]
                     ];
+                    dump('$body', $body);
                     sleep(1);
                     $orderSubmitResult = SendPostRequest($apiPath, $body)->object();
 
+                    dump('$orderSubmitResult', $orderSubmitResult);
+
                     if ($orderSubmitResult[0] == 'error') {
-                        Mail::send('emails.rate-alert-error', ['settings' => $settings, 'book' => $book, 'body' => $body, 'orderSubmitResult' => $orderSubmitResult], function($message)
-                        {
+                        Mail::send('emails.rate-alert-error', ['settings' => $settings, 'book' => $book, 'body' => $body, 'orderSubmitResult' => $orderSubmitResult], function ($message) {
                             $message->to(config('bitfinex.alert_email'), config('bitfinex.alert_name'))
                                 ->subject('Bitfinex submit order error');
                         });
 
+                        return;
                     }
 
-                    Mail::send('emails.rate-alert-notify', ['settings' => $settings, 'book' => $book, 'orderSubmitResult' => $orderSubmitResult], function($message)
-                    {
+                    Mail::send('emails.rate-alert-notify', ['settings' => $settings, 'book' => $book, 'orderSubmitResult' => $orderSubmitResult], function ($message) {
                         $message->to(config('bitfinex.alert_email'), config('bitfinex.alert_name'))
                             ->subject('Bitfinex Funding Rate Alert');
                     });
                 }
             }
         }
+    }
+
+    public function getRate()
+    {
+        $settings = Settings::first();
+        $apiPath = 'v2/book/' . $settings->currency . '/P0?len=1';
+        return SendGetRequest($apiPath);
+    }
+
+    public function cancelAllFundingOrders()
+    {
+        $apiPath = 'v2/auth/w/funding/offer/cancel/all';
+        sleep(1);
+        SendPostRequest($apiPath);
+    }
+
+    public function getWallets()
+    {
+        $apiPath = 'v2/auth/r/wallets';
+        sleep(1);
+        return SendPostRequest($apiPath)->object();
     }
 }
