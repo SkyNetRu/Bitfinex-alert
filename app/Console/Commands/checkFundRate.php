@@ -37,7 +37,6 @@ class checkFundRate extends Command
     {
         $settings = Settings::first();
         $book = $this->getRate()[0];
-        $book[$this->dictionary['rate']] = 0.056;
 
         if ($book[$this->dictionary['rate']] < $settings->rate_alert) {
             return;
